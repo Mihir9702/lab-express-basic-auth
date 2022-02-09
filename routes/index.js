@@ -89,7 +89,7 @@ router.get('/logout', (req, res) => {
 // Once Logged in, User can access these routes
 router.get('/main', (req, res) => {
 
-  if (req?.session?.user?.username) {
+  if (req.session?.user?.username) {
     res.render('userPages/main')
   } else {
     res.redirect('/login')
@@ -99,7 +99,7 @@ router.get('/main', (req, res) => {
 
 router.get('/private', (req, res) => {
 
-  if (req?.session?.user?.username) {
+  if (req.session?.user?.username) {
     res.render('userPages/private')
   } else {
     res.redirect('/login')
